@@ -1,0 +1,25 @@
+textarea.add-asset.form-control{
+    height: 108px;
+}
+.edit-asset {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.edit-asset .btn {
+    width: 100%;
+}
+.view-asset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}.edit-asset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#wrapper {
+    background-color: #f1f1f1;
+}
