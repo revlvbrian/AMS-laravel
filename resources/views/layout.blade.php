@@ -20,7 +20,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">AMS</a>
+            <a class="navbar-brand" href="/index">AMS</a>
         </div>
 
             <ul class="nav navbar-right top-nav">
@@ -71,19 +71,13 @@
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav side-nav">
                             <li class="active">
-                                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                                <a href="/index"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                             </li>
                             <li>
-                                <a href="charts.php"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-table"></i> Assets <i class="fa fa-fw fa-caret-down"></i></a>
-                                <ul id="demo" class="collapse">
+                                <a href="javascript:;" data-toggle="collapse" data-target="#asset"><i class="fa fa-fw fa-table"></i> Assets <i class="fa fa-fw fa-caret-down"></i></a>
+                                <ul id="asset" class="collapse">
                                     <li>
                                         <a href="/add-asset">Add Asset</a>
-                                    </li>
-                                    <li>
-                                        <a href="/edit-asset">Edit Asset</a>
                                     </li>
                                     <li>
                                         <a href="/view-asset">View Asset</a>
@@ -91,7 +85,15 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="forms.php"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                                <a href="javascript:;" data-toggle="collapse" data-target="#employee"><i class="fa fa-fw fa-user"></i> Employee <i class="fa fa-fw fa-caret-down"></i></a>
+                                <ul id="employee" class="collapse">
+                                    <li>
+                                        <a href="/add-employee">Add Employee</a>
+                                    </li>
+                                    <li>
+                                        <a href="/view-employee">View Employee</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

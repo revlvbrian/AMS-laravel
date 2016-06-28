@@ -1,47 +1,53 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-Route::model('asset', 'App\Asset');
-
-// CONNECTION
-Route::get('conn', function () {
-    return view('conn');
+$router->bind('asset', function($id)
+{
+    return App\Asset::whereId($id)->first();
 });
 
-Route::get('lib', function () {
-    return view('lib');
+$router->bind('employee', function($id)
+{
+    return App\Employee::whereId($id)->first();
 });
 
 // HOME
 Route::get('/', 'PagesController@home');
 
+Route::get('index', 'PagesController@home');
+
 // PAGES
-Route::get('add-asset', 'PagesController@addasset');
 
-Route::get('edit-asset', 'PagesController@editasset');
+    // ASSET
 
-Route::get('view-asset', 'PagesController@viewasset');
+    Route::get('add-asset', 'PagesController@addasset');
+
+    Route::get('view-asset', 'PagesController@viewasset');
+
+    Route::get('edit-asset/{id}', 'PagesController@editasset');
+
+    // EMPLOYEE
+
+    Route::get('add-employee', 'PagesController@addemployee');
+
+    Route::get('view-employee', 'PagesController@viewemployee');
+
+    Route::get('edit-employee/{id}', 'PagesController@editemployee');
 
 // FUNCTION
-Route::get('add', function () {
-    return view('add-asset');
-});
+    //ASSET
+    Route::patch('updateAsset/{id}', 'PagesController@updateAsset');
 
-Route::get('delete', function () {
-    return view('delete');
-});
+    Route::get('deleteAsset/{id}', 'PagesController@deleteAsset');
 
-Route::get('update', function () {
-    return view('update');
-});
+    Route::post('storeAsset', 'PagesController@storeAsset');
+
+    //EMPLOYEE
+    Route::patch('updateEmployee/{id}', 'PagesController@updateEmployee');
+
+    Route::get('deleteEmployee/{id}', 'PagesController@deleteEmployee');
+
+    Route::post('storeEmployee', 'PagesController@storeEmployee');
+
+
 
 

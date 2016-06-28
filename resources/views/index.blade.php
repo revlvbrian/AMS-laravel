@@ -5,7 +5,7 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <h1 class="page-header">
-                    Dashboard <small>Statistics Overview</small>
+                    Dashboard <small>Asset Management System</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li class="active">

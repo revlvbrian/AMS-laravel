@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSuppliersTable extends Migration
+class CreateAssetTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,13 @@ class CreateSuppliersTable extends Migration
      */
     public function up()
     {
-        Schema::create('suppliers', function (Blueprint $table) {
+        Schema::create('asset', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('serial_number');
+            $table->string('asset_name');
+            $table->string('asset_type');
+            $table->string('remarks');
+            $table->string('asset_image');
         });
     }
 
@@ -25,6 +29,6 @@ class CreateSuppliersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('suppliers');
+        Schema::drop('asset');
     }
 }
